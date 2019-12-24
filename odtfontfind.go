@@ -8,7 +8,8 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"launchpad.net/xmlpath-2"
+//	"launchpad.net/xmlpath-2"
+	"gopkg.in/xmlpath.v2"
 	"log"
 )
 
