@@ -1,6 +1,6 @@
 // This is a client program for the odtfindfont library
 // Its purpose is to take some files on the command line
-// and print the font-families that are used within the 
+// and print the font-families that are used within the
 // file.
 
 // Author: Stefan Schröder
@@ -17,12 +17,11 @@ func main() {
 	flag.Parse()
 	var ret = []string{}
 	for _, filename := range flag.Args() {
-		if (
-			strings.HasSuffix(filename, ".odt") ||
+		if strings.HasSuffix(filename, ".odt") ||
 			strings.HasSuffix(filename, ".ods") ||
-			strings.HasSuffix(filename, ".odp")  ) {
+			strings.HasSuffix(filename, ".odp") {
 			ret = append(ret, o.LibreofficeFontReader(filename)...)
-		} else if (strings.HasSuffix(filename, ".svg")) {
+		} else if strings.HasSuffix(filename, ".svg") {
 			ret = append(ret, o.SvgFontReader(filename)...)
 		} else {
 			fmt.Println("Unknown suffix for \"" + filename + "\"")
@@ -32,4 +31,3 @@ func main() {
 		fmt.Println(item)
 	}
 }
-
