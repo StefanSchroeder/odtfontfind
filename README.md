@@ -1,3 +1,7 @@
+
+[![GoDoc](https://godoc.org/github.com/StefanSchroeder/odtfontfind?status.png)](https://godoc.org/github.com/StefanSchroeder/odtfontfind)
+[![Go Report Card](https://goreportcard.com/badge/github.com/StefanSchroeder/odtfontfind)](https://goreportcard.com/report/github.com/StefanSchroeder/odtfontfind)
+
 # odtfontfind
 
 The purpose of odtfontfind is to determine font-families that are used
@@ -8,11 +12,13 @@ in a LibreOffice document or in an SVG Inkscape image.
 To install the client, run
 
 	GOBIN=~/bin go install github.com/StefanSchroeder/odtfontfind/odtfontfind-client@latest
-	~/bin/odtfontfind-client sample-file.odt
+	~/bin/odtfontfind-client ~/sample-file.odt
 
 The result might look like this
 
-
+	Liberation Serif
+	Liberation Sans
+	Microsoft YaHei
 
 But usually you might want to use the library. In this case, no
 install is required, just reference the library in your import
